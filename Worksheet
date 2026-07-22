@@ -1,0 +1,11 @@
+Lab worksheet explanation
+
+`DECIMAL(10,2)` is a fixed-precision numeric type that stores values with exactly 10 total digits and 2 digits after the decimal point. For example, it can store values like `12345678.90` accurately.
+
+It is preferred over `FLOAT` for currency because:
+
+- `DECIMAL` stores exact decimal values
+- `FLOAT` uses binary floating-point representation, which can introduce rounding errors
+- currency amounts must be precise, so `DECIMAL(10,2)` avoids small calculation mistakes such as `19.99 + 0.01` becoming slightly inaccurate
+
+`NOT NULL` means that a column cannot contain a missing value. If you try to insert a row without providing a value for that column, the database will reject the insert. In other words, it enforces that the field must always have a value.
